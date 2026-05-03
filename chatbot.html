@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot</title>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <style>
+    html, body, #n8n-chat {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="n8n-chat"></div>
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      webhookUrl: 'https://amer-n8n01.eddyfindt.com/webhook/7cd85073-3b86-4fe4-9110-a9cb0233e589/chat',
+      mode: 'fullscreen',
+      initialMessages: [
+        'Bonjour ! 👋',
+        'Comment puis-je vous aider aujourd\'hui ?'
+      ],
+      i18n: {
+        en: {
+          title: 'Assistant',
+          subtitle: 'Posez-moi vos questions',
+          footer: '',
+          getStarted: 'Nouvelle conversation',
+          inputPlaceholder: 'Tapez votre question...'
+        }
+      }
+    });
+  </script>
+</body>
+</html>
